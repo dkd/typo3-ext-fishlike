@@ -1,0 +1,46 @@
+{
+    "name": "dkd/fishlike",
+    "type": "typo3-cms-extension",
+    "description": "TYPO3 Extension Fishlike",
+    "keywords": ["fishshop", "typo3"],
+    "homepage": "https://github.com/dkd/typo3-ext-fishlike/",
+    "license": "GPL-2.0",
+    "authors": [
+        {
+            "name": "Dimitri Ebert",
+            "homepage": "http://www.dkd.de",
+            "role": "Developer"
+        }
+    ],
+    "autoload": {
+        "psr-4": {
+            "Dkd\\Fishlike\\": "Classes/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "Dkd\\Fishlike\\Tests\\": "Tests/"
+        },
+        "classmap": [
+            "typo3/sysext/core",
+            "typo3/sysext/backend",
+            "typo3/sysext/frontend",
+            "typo3/sysext/extbase",
+            "typo3/sysext/fluid",
+            "typo3/sysext/lang"
+        ]
+    },
+    "require-dev": {
+        "squizlabs/php_codesniffer": "1.*",
+        "phpunit/phpunit": "~4.4.5",
+        "typo3-ci/typo3sniffpool": "dev-master",
+        "typo3-ci/typo3cms": "dev-master",
+        "typo3/cms": "~6.2.14"
+    },
+    "repositories": [
+        {
+            "type": "composer",
+            "url": "http://composer.typo3.org"
+        }
+    ]
+}
