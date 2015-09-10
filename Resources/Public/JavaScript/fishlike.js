@@ -4,7 +4,7 @@ $(document).ready(function() {
     var fishlike = {
         likeAction: 'tx_fishlike_like[action]=like',
         getCounterAction: 'tx_fishlike_like[action]=getCounter',
-        typeNum: 1441893610.
+        typeNum: 1441893610,
         path: $(location).attr('href'),
 
         getCounter: function (objectType, objectUid, element) {
