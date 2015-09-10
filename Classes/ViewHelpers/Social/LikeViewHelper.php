@@ -30,6 +30,11 @@ class LikeViewHelper extends \TYPO3\CMS\Fluid\Core\ViewHelper\AbstractTagBasedVi
 	protected $tagName = 'a';
 
 	/**
+	 * @var	string
+	 */
+	protected $buttonContent = '<span class="glyphicon glyphicon-heart-empty">fishlike <span class="fishlike-count"></span></span>';
+
+	/**
 	 * Arguments initialization
 	 *
 	 * @return void
@@ -59,7 +64,7 @@ class LikeViewHelper extends \TYPO3\CMS\Fluid\Core\ViewHelper\AbstractTagBasedVi
 			}
 		}
 		
-		$this->tag->setContent($this->renderChildren());
+		$this->tag->setContent($this->buttonContent);
 
 		return $this->tag->render();
 	}

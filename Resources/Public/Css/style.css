@@ -1,0 +1,20 @@
+.fishlike-button {
+    background: #ff8700 none repeat scroll 0 0;
+    border-radius: 5px;
+    color: #fff;
+    display: inline-block;
+    font-size: 12px;
+    font-weight: bold;
+    margin-bottom: 5px;
+    padding: 2px 2px 2px 4px;
+}
+
+
+.fishlike-count {
+    background: #fff none repeat scroll 0 0;
+    border-radius: 5px;
+    color: #666;
+    font-size: 11px;
+    font-weight: normal;
+    padding: 3px;
+}

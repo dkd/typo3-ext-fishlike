@@ -8,28 +8,37 @@ use TYPO3\CMS\Extensionmanager\Controller\ActionController;
  */
 class ApplicationController extends ActionController {
 	/**
-	 * like action
+	 * Like action
 	 * 
-	 * @param $type
-	 * @param $uid
+	 * @param string $type
+	 * @param integer $uid
      * @return integer
 	 */
 	public function likeAction($type, $uid) {
 		/** @var \Dkd\Fishlike\Service\Fishlike $service */
 		$service = $this->objectManager->get('Dkd\Fishlike\Service\Fishlike');
-		return $service->addLike($type, $uid);
+		$count = 0;
+		if(isset($this->settings['monitoredTypes'][$type])  && $this->settings['monitoredTypes'][$type] == 1) {
+			$count = $service->addLike($type, $uid);
+		}
+
+		return json_encode($count);
 	}
 
 	/**
-	 * get counter action
+	 * Get counter action
 	 *
-	 * @param $type
-	 * @param $uid
+	 * @param string $type
+	 * @param integer $uid
      * @return integer
 	 */
 	public function getCounterAction($type, $uid) {
 		/** @var \Dkd\Fishlike\Service\Fishlike $service */
 		$service = $this->objectManager->get('\Dkd\Fishlike\Service\Fishlike');
-		return $service->getCounter($type, $uid);
+		$count = 0;
+		if(isset($this->settings['monitoredTypes'][$type])  && $this->settings['monitoredTypes'][$type] == 1) {
+			$count = $service->getCounter($type, $uid);
+		}
+		return json_encode($count);
 	}
 }

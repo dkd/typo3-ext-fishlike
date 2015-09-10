@@ -1,0 +1,29 @@
+plugin.tx_fishlike {
+	settings {
+		monitoredTypes {
+			pages = 1
+			tx_news = 1
+			sys_file = 1
+		}
+	}
+}
+
+fishlike = PAGE
+fishlike {
+	typeNum = 1441893610
+	config {
+		disableAllHeaderCode = 1
+		metaCharset = UTF-8
+		debug = 0
+	}
+	10 < tt_content.list.20.fishlike_like
+}
+
+page {
+	includeCSS {
+		fishlike = EXT:fishlike/Resources/Public/Css/style.css
+	}
+	includeJSFooter {
+		fishlike = EXT:fishlike/Resources/Public/JavaScript/fishlike.js
+	}
+}
