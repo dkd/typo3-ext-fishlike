@@ -43,7 +43,7 @@ class Fishlike implements SingletonInterface {
 		);
 
 		if(isset($row['uid'])) {
-			$counter = ++$row['counter'];
+			$counter = $row['counter'] + 1;
 			$this->getDatabaseConnection()->exec_UPDATEquery(
 				$this->table,
 				'uid=' . $row['uid'],

@@ -1,6 +1,4 @@
 $(document).ready(function() {
-
-
     var fishlike = {
         likeAction: 'tx_fishlike_like[action]=like',
         getCounterAction: 'tx_fishlike_like[action]=getCounter',
@@ -8,13 +6,15 @@ $(document).ready(function() {
         path: '/',
 
         getCounter: function (objectType, objectUid, element) {
-            jQuery.ajax({
+            $.ajax({
                 url: fishlike.path,
+                dataType: 'json',
                 data: '&' + fishlike.getCounterAction
                 + '&type=' + fishlike.typeNum
                 + '&tx_fishlike_like[type]=' + objectType
                 + '&tx_fishlike_like[uid]=' + objectUid,
                 success: function (resultData) {
+                    console.log(resultData);
                     $(element).find('.fishlike-count').html(resultData.count);
                 },
                 error: function (error) {
@@ -26,11 +26,13 @@ $(document).ready(function() {
         like: function (objectType, objectUid, element) {
             $.ajax({
                 url: fishlike.path,
-                data: +'&' + likeAction
-                + '&type=' + typeNum
-                + 'tx_fishlike_like[type]=' + objectType
+                dataType: 'json',
+                data: '&' + fishlike.likeAction
+                + '&type=' + fishlike.typeNum
+                + '&tx_fishlike_like[type]=' + objectType
                 + '&tx_fishlike_like[uid]=' + objectUid,
                 success: function (resultData) {
+                    console.log(resultData);
                     $(element).find('.fishlike-count').html(resultData.count);
                 },
                 error: function (error) {

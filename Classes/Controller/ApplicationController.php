@@ -22,7 +22,7 @@ class ApplicationController extends ActionController {
 			$count = $service->addLike($type, $uid);
 		}
 
-		return json_encode($count);
+		return json_encode(array('count' => $count));
 	}
 
 	/**
@@ -39,6 +39,6 @@ class ApplicationController extends ActionController {
 		if(isset($this->settings['monitoredTypes'][$type])  && $this->settings['monitoredTypes'][$type] == 1) {
 			$count = $service->getCounter($type, $uid);
 		}
-		return json_encode($count);
+		return json_encode(array('count' => $count));
 	}
 }
