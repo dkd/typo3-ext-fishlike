@@ -1,7 +1,7 @@
 <?php
 namespace Dkd\Fishlike\Controller;
 
-use TYPO3\CMS\Extbase\Mvc\Controller\ActionController
+use TYPO3\CMS\Extbase\Mvc\Controller\ActionController;
 
 /**
  * Class ArchiveController
