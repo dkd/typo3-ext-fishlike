@@ -9,6 +9,9 @@
     padding: 2px 2px 2px 4px;
 }
 
+a.fishlike-button:hover {
+    color: #000;
+}
 
 .fishlike-count {
     background: #fff none repeat scroll 0 0;
