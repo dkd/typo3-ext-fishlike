@@ -19,7 +19,7 @@ namespace Dkd\Fishlike\ViewHelpers\Social;
  * ViewHelper to add a fishlike button
  *
  * @package TYPO3
- * @subpackage tx_news
+ * @subpackage tx_fishlike
  */
 class LikeViewHelper extends \TYPO3\CMS\Fluid\Core\ViewHelper\AbstractTagBasedViewHelper {
 

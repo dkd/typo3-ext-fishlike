@@ -22,7 +22,7 @@ $usageTrackingServiceManager->register(
 );
 
 $usageTrackingServiceManager->register(
-	'tx_news',
+	'tx_news_domain_model_news',
 	'Dkd\\Fishlike\\Service\\Data\\FishlikeUsageTrackingService',
 	array('fishlikes')
 );

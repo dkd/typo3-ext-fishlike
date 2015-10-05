@@ -2,7 +2,7 @@ plugin.tx_fishlike {
 	settings {
 		monitoredTypes {
 			pages = 1
-			tx_news = 1
+			tx_news_domain_model_news = 1
 			sys_file = 1
 		}
 	}
